@@ -37,10 +37,10 @@ async function login(req, res) {
     try {
         const payload = req.body
 
-        if (!payload.email || !payload.password || !payload.userType) {
+        if (!payload.email || !payload.password) {
             throw new Error("Missing Required feilds");
         }
-        const [userInfo] = await userService.getInfo( { email: payload.email, userType: payload.userType } );
+        const [userInfo] = await userService.getInfo( { email: payload.email} );
 
         if (!userInfo) {
             throw new Error("User not found.");

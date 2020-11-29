@@ -1,0 +1,10 @@
+{
+    "PORT": 3000,
+    "MYSQL": {
+      "host": "stlocalho",
+      "user": "code",
+      "password": "password",
+      "database": "test"
+    },
+    "secretString": "JattPooraKaimAA"
+  }
